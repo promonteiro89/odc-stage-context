@@ -67,19 +67,19 @@ public struct RuntimeDetails
     IconResourceName = "app-icon.png")]
 public interface IRuntimeContext
 {
-    [OSAction(Description = "Returns details about the current stage: its type (Production, NonProduction, or Unknown), identifier, and URL.", ReturnName = "Stage", IconResourceName = "action-icon.png")]
+    [OSAction(Description = "Returns details about the current stage: its type (Production, NonProduction, or Unknown), identifier, and URL.", ReturnName = "Stage", ReturnDescription = "Details about the current stage (type, identifier, and URL).", IconResourceName = "action-icon.png")]
     StageDetails GetCurrentStage();
 
-    [OSAction(Description = "Returns True when the app is running on a Production stage.", ReturnName = "IsProduction", IconResourceName = "action-icon.png")]
+    [OSAction(Description = "Returns True when the app is running on a Production stage.", ReturnName = "IsProduction", ReturnDescription = "True when running on a Production stage; otherwise False.", IconResourceName = "action-icon.png")]
     bool IsProductionStage();
 
-    [OSAction(Description = "Returns the unique identifier of the current stage.", ReturnName = "StageId", IconResourceName = "action-icon.png")]
+    [OSAction(Description = "Returns the unique identifier of the current stage.", ReturnName = "StageId", ReturnDescription = "Unique identifier of the current stage.", IconResourceName = "action-icon.png")]
     string GetStageId();
 
-    [OSAction(Description = "Returns the URL the current stage is served from.", ReturnName = "RuntimeUrl", IconResourceName = "action-icon.png")]
+    [OSAction(Description = "Returns the URL the current stage is served from.", ReturnName = "RuntimeUrl", ReturnDescription = "URL the current stage is served from.", IconResourceName = "action-icon.png")]
     string GetRuntimeUrl();
 
-    [OSAction(Description = "Returns technical details about the server runtime, such as the .NET version, operating system, CPU, and region.", ReturnName = "Runtime", IconResourceName = "action-icon.png")]
+    [OSAction(Description = "Returns technical details about the server runtime, such as the .NET version, operating system, CPU, and region.", ReturnName = "Runtime", ReturnDescription = "Technical details about the server runtime (framework, OS, CPU, region).", IconResourceName = "action-icon.png")]
     RuntimeDetails GetRuntimeDetails();
 }
 
